@@ -8,7 +8,13 @@ import ToastService from 'primevue/toastservice';
 createApp(App)
     .use(PrimeVue, {
         theme: {
-            preset: Aura
+            preset: Aura,
+            options: {
+                cssLayer: {
+                    name: 'primevue',
+                    order: 'theme, base, primevue'
+                }
+            }
         }
     })
     .use(ToastService)
